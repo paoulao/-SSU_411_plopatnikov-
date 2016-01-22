@@ -13,9 +13,8 @@ public class Friday_in_month
     {
         int kol_year = 0;
         Calendar calendar = Calendar.getInstance();
-        month--;
         calendar.set(calendar.MONTH, month);
-        for(int i=1800; i<=2020; i++)
+        for(int i=1800; i<=2015; i++)
         {
             calendar.set(calendar.YEAR, i);
             calendar.set(calendar.DAY_OF_MONTH, 12);
@@ -36,12 +35,10 @@ public class Friday_in_month
         try
         {
             int month = Integer.parseInt(lol);
-            if (month > 0 && month <= 12) {
-                month++;
+            if (month >= 0 && month <= 11)
                 res(month);
-            }
             else
-                System.err.println("0<month<13");
+                System.err.println("0<=month<=11");
         }
         catch (NumberFormatException e)
         {
